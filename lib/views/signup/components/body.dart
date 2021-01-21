@@ -29,10 +29,12 @@ class Body extends StatelessWidget {
           ),
           RoundedInputField(
             hintText: "Your Phone no.",
+            icon: Icons.phone,
             onChanged: (value) {},
           ),
           RoundedInputField(
             hintText: "Type your Email here",
+            icon: Icons.email,
             onChanged: (value) {},
           ),
           RoundedPasswordField(
