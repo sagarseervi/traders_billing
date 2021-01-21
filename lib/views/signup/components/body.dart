@@ -24,6 +24,14 @@ class Body extends StatelessWidget {
           ),
           SizedBox(height: size.height * 0.07),
           RoundedInputField(
+            hintText: "Your Name",
+            onChanged: (value) {},
+          ),
+          RoundedInputField(
+            hintText: "Your Phone no.",
+            onChanged: (value) {},
+          ),
+          RoundedInputField(
             hintText: "Type your Email here",
             onChanged: (value) {},
           ),
