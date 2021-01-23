@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:traders_billing/components/text_field_container.dart';
+import 'package:traders_billing/components/text_area_container.dart';
 
 import '../constants.dart';
 
@@ -16,8 +16,8 @@ class RoundedInputArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextArea(
-      child: TextArea(
+    return TextAreaContainer(
+      child: TextField(
         onChanged: onChanged,
         decoration: InputDecoration(
           icon: Icon(
@@ -31,5 +31,3 @@ class RoundedInputArea extends StatelessWidget {
     );
   }
 }
-
-Widget TextArea({TextField child, InputDecoration decoration, onChanged}) {}

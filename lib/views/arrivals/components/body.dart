@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:traders_billing/components/account_check.dart';
 import 'package:traders_billing/components/rounded_button.dart';
 import 'package:traders_billing/components/rounded_input_field.dart';
-import 'package:traders_billing/components/rounded_password_field.dart';
+import 'package:traders_billing/components/rounded_input_area.dart';
 import 'package:traders_billing/views/dashboard/dashboard.dart';
 import 'package:traders_billing/views/signup/signupView.dart';
 //import 'package:traders_billing/constants.dart';
@@ -28,21 +28,50 @@ class Body extends StatelessWidget {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.05),
-            RoundedInputField(
-              hintText: "Farmer ID",
-              onChanged: (value) {},
-            ),
-            RoundedInputField(
-              hintText: "Farmer Contact",
-              onChanged: (value) {},
-            ),
-            RoundedInputField(
-              hintText: "Farmer Name",
-              onChanged: (value) {},
-            ),
-            RoundedInputField(
-              hintText: "Address",
-              onChanged: (value) {},
+            Row(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    RoundedInputField(
+                      hintText: "Farmer ID",
+                      onChanged: (value) {},
+                    ),
+                    RoundedInputField(
+                      hintText: "Farmer Contact",
+                      onChanged: (value) {},
+                    ),
+                    RoundedInputField(
+                      hintText: "Farmer Name",
+                      onChanged: (value) {},
+                    ),
+                    RoundedInputArea(
+                      hintText: "Address",
+                      onChanged: (value) {},
+                    )
+                  ],
+                ),
+                SizedBox(height: size.height * 0.05, width: size.width * 0.07),
+                Column(
+                  children: <Widget>[
+                    RoundedInputField(
+                      hintText: "Farmer ID",
+                      onChanged: (value) {},
+                    ),
+                    RoundedInputField(
+                      hintText: "Farmer Contact",
+                      onChanged: (value) {},
+                    ),
+                    RoundedInputField(
+                      hintText: "Farmer Name",
+                      onChanged: (value) {},
+                    ),
+                    RoundedInputArea(
+                      hintText: "Address",
+                      onChanged: (value) {},
+                    )
+                  ],
+                ),
+              ],
             ),
             RoundedButton(
               text: "Login",
