@@ -27,7 +27,7 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                SizedBox(width: size.width * .50),
+                SizedBox(width: size.width * 0.20),
               ],
             ),
             Column(
@@ -60,6 +60,58 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                 FormTextField(
                   labelText: "Address",
                   returnText: "Please Enter Address",
+                ),
+                Text(
+                  "Personal Account Details",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                FormTextField(
+                  labelText: "Farmer ID Type",
+                  returnText: "Please Enter the First Name",
+                ),
+                Text(
+                  "Account Details",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                FormTextField(
+                  labelText: "Bank Name",
+                  returnText: "Enter Bank Name",
+                ),
+                FormTextField(
+                  labelText: "Account Type",
+                  returnText: "Enter the Account Type",
+                ),
+                FormTextField(
+                  labelText: "IFSC Code",
+                  returnText: "Enter IFSC Code",
+                ),
+                Text(
+                  "Other Details",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                FormTextField(
+                  labelText: "Vehicle Details",
+                  returnText: "Enter Vehicle Details",
+                ),
+                FormTextField(
+                  labelText: "Driver Name",
+                  returnText: "Enter Driver Name",
+                ),
+                FormTextField(
+                  labelText: "Reg. No.",
+                  returnText: "Enter Reg. no.",
+                ),
+                Text(
+                  "Gurantor",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                FormTextField(
+                  labelText: "Name",
+                  returnText: "Name",
+                ),
+                FormTextField(
+                  labelText: "ID Proof Type",
+                  returnText: "ID Proof Type",
                 ),
               ],
             ),
@@ -98,6 +150,42 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                 FormTextField(
                   labelText: "Description",
                   returnText: "Enter Description",
+                ),
+                Text(
+                  "",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                FormTextField(
+                  labelText: "ID Name",
+                  returnText: "Enter ID Name",
+                ),
+                Text(
+                  "",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                FormTextField(
+                  labelText: "Holder Name",
+                  returnText: "Enter Holder Name",
+                ),
+                FormTextField(
+                  labelText: "Account No.",
+                  returnText: "Enter Account No.",
+                ),
+                FormTextField(
+                  labelText: "Branch Name",
+                  returnText: "Enter Branch Name",
+                ),
+                Text(
+                  "",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                FormTextField(
+                  labelText: "Vehicle Name",
+                  returnText: "Enter Vehicle Name",
+                ),
+                FormTextField(
+                  labelText: "Contact No.",
+                  returnText: "Contact No.",
                 ),
                 SizedBox(height: size.height * 0.05),
                 RaisedButton(
