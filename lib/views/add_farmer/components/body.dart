@@ -27,7 +27,7 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                SizedBox(width: size.width * 0.03),
+                SizedBox(width: size.width * .50),
               ],
             ),
             Column(
@@ -51,7 +51,15 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                 ),
                 FormTextField(
                   labelText: "Alt Contact Number",
-                  returnText: "Please Enter the Contact Number",
+                  returnText: "Please Enter Alt. Contact Number",
+                ),
+                FormTextField(
+                  labelText: "Village",
+                  returnText: "Please Enter Village Name",
+                ),
+                FormTextField(
+                  labelText: "Address",
+                  returnText: "Please Enter Address",
                 ),
               ],
             ),
@@ -78,6 +86,18 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                 FormTextField(
                   labelText: "Town",
                   returnText: "Please Enter the Middle Name",
+                ),
+                FormTextField(
+                  labelText: "State",
+                  returnText: "Enter State",
+                ),
+                FormTextField(
+                  labelText: "Pincode",
+                  returnText: "Enter Pincode",
+                ),
+                FormTextField(
+                  labelText: "Description",
+                  returnText: "Enter Description",
                 ),
                 SizedBox(height: size.height * 0.05),
                 RaisedButton(
