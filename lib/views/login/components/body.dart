@@ -5,8 +5,9 @@ import 'package:traders_billing/components/account_check.dart';
 import 'package:traders_billing/components/rounded_button.dart';
 import 'package:traders_billing/components/rounded_input_field.dart';
 import 'package:traders_billing/components/rounded_password_field.dart';
-//import 'package:traders_billing/views/add_farmer/addFarmer.dart';
+import 'package:traders_billing/views/add_farmer/addFarmer.dart';
 import 'package:traders_billing/views/dashboard/dashboard.dart';
+import 'package:traders_billing/views/arrivals/arrivalsView.dart';
 //import 'package:traders_billing/views/arrivals/arrivalsView.dart';
 //import 'package:traders_billing/views/dashboard/dashboard.dart';
 import 'package:traders_billing/views/signup/signupView.dart';
@@ -45,7 +46,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return DashboardView();
+                      return ArrivalsView();
                     },
                   ),
                 );
