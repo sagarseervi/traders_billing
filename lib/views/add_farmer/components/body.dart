@@ -61,6 +61,7 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                   labelText: "Address",
                   returnText: "Please Enter Address",
                 ),
+                SizedBox(height: size.height * 0.05),
                 Text(
                   "Personal Account Details",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -69,6 +70,7 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                   labelText: "Farmer ID Type",
                   returnText: "Please Enter the First Name",
                 ),
+                SizedBox(height: size.height * 0.05),
                 Text(
                   "Account Details",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -85,6 +87,7 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                   labelText: "IFSC Code",
                   returnText: "Enter IFSC Code",
                 ),
+                SizedBox(height: size.height * 0.05),
                 Text(
                   "Other Details",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -101,6 +104,7 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                   labelText: "Reg. No.",
                   returnText: "Enter Reg. no.",
                 ),
+                SizedBox(height: size.height * 0.05),
                 Text(
                   "Gurantor",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -151,18 +155,12 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                   labelText: "Description",
                   returnText: "Enter Description",
                 ),
-                Text(
-                  "",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+                SizedBox(height: size.height * 0.06),
                 FormTextField(
                   labelText: "ID Name",
                   returnText: "Enter ID Name",
                 ),
-                Text(
-                  "",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+                SizedBox(height: size.height * 0.07),
                 FormTextField(
                   labelText: "Holder Name",
                   returnText: "Enter Holder Name",
@@ -175,10 +173,7 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                   labelText: "Branch Name",
                   returnText: "Enter Branch Name",
                 ),
-                Text(
-                  "",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+                SizedBox(height: size.height * 0.08),
                 FormTextField(
                   labelText: "Vehicle Name",
                   returnText: "Enter Vehicle Name",
@@ -186,6 +181,15 @@ class _AddFarmerBodyState extends State<AddFarmerBody> {
                 FormTextField(
                   labelText: "Contact No.",
                   returnText: "Contact No.",
+                ),
+                SizedBox(height: size.height * 0.09),
+                FormTextField(
+                  labelText: "Contact No.",
+                  returnText: "Enter Contact no.",
+                ),
+                FormTextField(
+                  labelText: "ID No.",
+                  returnText: "ID No.",
                 ),
                 SizedBox(height: size.height * 0.05),
                 RaisedButton(
