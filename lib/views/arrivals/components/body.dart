@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:traders_billing/components/form_text_field.dart';
+import 'package:traders_billing/components/table_field.dart';
 
 //import 'package:traders_billing/constants.dart';
 
@@ -29,95 +30,23 @@ class _ArrivalsBodyState extends State<ArrivalsBody> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                SizedBox(width: size.width * 0.20),
+                SizedBox(width: size.width * 0.10),
               ],
             ),
             Column(
               children: <Widget>[
                 SizedBox(height: size.height * 0.05),
                 Text(
-                  "Add New Farmer",
+                  "New Arrivals",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 FormTextField(
-                  labelText: "First Name",
+                  labelText: "Farmer ID",
                   returnText: "Please Enter the First Name",
-                ),
-                FormTextField(
-                  labelText: "Last Name",
-                  returnText: "Please Enter the Last Name",
-                ),
-                FormTextField(
-                  labelText: "Date Of Birth",
-                  returnText: "Please Enter the Date of Birth",
-                ),
-                FormTextField(
-                  labelText: "Alt Contact Number",
-                  returnText: "Please Enter Alt. Contact Number",
-                ),
-                FormTextField(
-                  labelText: "Village",
-                  returnText: "Please Enter Village Name",
                 ),
                 FormTextField(
                   labelText: "Address",
-                  returnText: "Please Enter Address",
-                ),
-                SizedBox(height: size.height * 0.05),
-                Text(
-                  "Personal Account Details",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                FormTextField(
-                  labelText: "Farmer ID Type",
-                  returnText: "Please Enter the First Name",
-                ),
-                SizedBox(height: size.height * 0.05),
-                Text(
-                  "Account Details",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                FormTextField(
-                  labelText: "Bank Name",
-                  returnText: "Enter Bank Name",
-                ),
-                FormTextField(
-                  labelText: "Account Type",
-                  returnText: "Enter the Account Type",
-                ),
-                FormTextField(
-                  labelText: "IFSC Code",
-                  returnText: "Enter IFSC Code",
-                ),
-                SizedBox(height: size.height * 0.05),
-                Text(
-                  "Other Details",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                FormTextField(
-                  labelText: "Vehicle Details",
-                  returnText: "Enter Vehicle Details",
-                ),
-                FormTextField(
-                  labelText: "Driver Name",
-                  returnText: "Enter Driver Name",
-                ),
-                FormTextField(
-                  labelText: "Reg. No.",
-                  returnText: "Enter Reg. no.",
-                ),
-                SizedBox(height: size.height * 0.05),
-                Text(
-                  "Gurantor",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                FormTextField(
-                  labelText: "Name",
-                  returnText: "Name",
-                ),
-                FormTextField(
-                  labelText: "ID Proof Type",
-                  returnText: "ID Proof Type",
+                  returnText: "Enter the Address",
                 ),
               ],
             ),
@@ -130,68 +59,34 @@ class _ArrivalsBodyState extends State<ArrivalsBody> {
               children: <Widget>[
                 SizedBox(height: size.height * 0.07),
                 FormTextField(
-                  labelText: "Middle Name",
-                  returnText: "Please Enter the Middle Name",
-                ),
-                FormTextField(
-                  labelText: "Contact Number",
-                  returnText: "Please Enter the Middle Name",
-                ),
-                FormTextField(
-                  labelText: "Email",
-                  returnText: "Please Enter the Middle Name",
+                  labelText: "Farmer Contact",
+                  returnText: "Enter Farmer Contact",
                 ),
                 FormTextField(
                   labelText: "Town",
-                  returnText: "Please Enter the Middle Name",
+                  returnText: "Enter the Town Name",
+                ),
+                FormTextField(
+                  labelText: "City",
+                  returnText: "Enter the City Name",
                 ),
                 FormTextField(
                   labelText: "State",
-                  returnText: "Enter State",
+                  returnText: "Enter the State Name",
                 ),
-                FormTextField(
-                  labelText: "Pincode",
-                  returnText: "Enter Pincode",
-                ),
-                FormTextField(
-                  labelText: "Description",
-                  returnText: "Enter Description",
-                ),
-                SizedBox(height: size.height * 0.06),
-                FormTextField(
-                  labelText: "ID Name",
-                  returnText: "Enter ID Name",
-                ),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                SizedBox(width: size.width * 0.03),
+              ],
+            ),
+            Column(
+              children: <Widget>[
                 SizedBox(height: size.height * 0.07),
                 FormTextField(
-                  labelText: "Holder Name",
-                  returnText: "Enter Holder Name",
-                ),
-                FormTextField(
-                  labelText: "Account No.",
-                  returnText: "Enter Account No.",
-                ),
-                FormTextField(
-                  labelText: "Branch Name",
-                  returnText: "Enter Branch Name",
-                ),
-                SizedBox(height: size.height * 0.08),
-                FormTextField(
-                  labelText: "Vehicle Name",
-                  returnText: "Enter Vehicle Name",
-                ),
-                FormTextField(
-                  labelText: "Contact No.",
-                  returnText: "Contact No.",
-                ),
-                SizedBox(height: size.height * 0.09),
-                FormTextField(
-                  labelText: "Contact No.",
-                  returnText: "Enter Contact no.",
-                ),
-                FormTextField(
-                  labelText: "ID No.",
-                  returnText: "ID No.",
+                  labelText: "Farmer Name",
+                  returnText: "Enter Farmer Name",
                 ),
                 SizedBox(height: size.height * 0.05),
                 RaisedButton(
@@ -201,7 +96,7 @@ class _ArrivalsBodyState extends State<ArrivalsBody> {
                       formkey.currentState.validate();
                     })
               ],
-            )
+            ),
           ],
         )),
       ),

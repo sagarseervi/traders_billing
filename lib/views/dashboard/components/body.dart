@@ -33,11 +33,12 @@ class Body extends StatelessWidget {
               SizedBox(height: size.height * 0.01),
               SideNavigationBar(),
               Expanded(
-                  child: Navigator(
-                key: locator<NavigationService>().navigatorKey,
-                onGenerateRoute: generateRoute,
-                initialRoute: HomeRoute,
-              ))
+                child: Navigator(
+                  key: locator<NavigationService>().navigatorKey,
+                  onGenerateRoute: generateRoute,
+                  initialRoute: HomeRoute,
+                ),
+              )
             ],
           ),
           Column(
