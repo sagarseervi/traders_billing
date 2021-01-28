@@ -10,7 +10,6 @@ class AddBuyerBody extends StatefulWidget {
 
 class _AddBuyerBodyState extends State<AddBuyerBody> {
   final formkey = GlobalKey<FormState>();
-  String firstname;
 
   @override
   Widget build(BuildContext context) {
