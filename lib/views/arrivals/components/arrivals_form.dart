@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:traders_billing/components/form_text_field.dart';
+import 'package:traders_billing/components/buttons.dart';
+import 'package:traders_billing/components/form_input_field.dart';
+import 'package:traders_billing/services/searchable_text.dart';
+import 'package:traders_billing/views/arrivals/components/arrivals_table.dart';
+//import 'package:traders_billing/views/arrivals/components/arrivals_table.dart';
 
 class ArrivalsForm extends StatefulWidget {
   ArrivalsForm({Key key}) : super(key: key);
@@ -9,84 +13,131 @@ class ArrivalsForm extends StatefulWidget {
 }
 
 class _ArrivalsFormState extends State<ArrivalsForm> {
-  final formkey = GlobalKey<FormState>();
+  final _arrvialsFormKey = GlobalKey<FormState>();
+
+  final TextEditingController myController1 = TextEditingController();
+  final TextEditingController myController2 = TextEditingController();
+  final TextEditingController myController3 = TextEditingController();
+  final TextEditingController myController4 = TextEditingController();
+  final TextEditingController myController5 = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is removed from the
+    // widget tree.
+    myController1.dispose();
+    myController2.dispose();
+    myController3.dispose();
+    myController4.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
-        child: Form(
-            child: Row(
-      children: <Widget>[
-        Column(
-          children: <Widget>[
-            //SizedBox(width: size.width * 0.10),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            SizedBox(height: size.height * 0.05),
-            Text(
-              "New Arrivals",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      child: Form(
+          key: _arrvialsFormKey,
+          child: SizedBox(
+            width: 800,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                        flex: 1,
+                        child: Column(
+                          children: [
+                            FormSearchableField(
+                              labelText: 'Farmer ID',
+                              mycontroller: myController1,
+                              returnFunction: fetchFarmerId(),
+                            ),
+                            FormSearchableField(
+                              labelText: 'Farmer Name',
+                              mycontroller: myController2,
+                              returnFunction: fetchFarmerName(),
+                            ),
+                            FormInputField(
+                              labelText: 'Address',
+                            ),
+                            FormInputField(
+                              labelText: 'ID Proof',
+                            ),
+                            FormInputField(
+                              labelText: 'Loader Gang ID',
+                            ),
+                          ],
+                        )),
+                    Expanded(
+                        flex: 1,
+                        child: Column(
+                          children: [
+                            FormSearchableField(
+                              labelText: 'Contact',
+                              mycontroller: myController3,
+                              returnFunction: fetchFarmerContact(),
+                            ),
+                            FormInputField(
+                              labelText: 'Town',
+                            ),
+                            FormInputField(
+                              labelText: 'City',
+                            ),
+                            FormInputField(
+                              labelText: 'State',
+                            ),
+                            FormInputField(
+                              labelText: 'Loader Name',
+                            )
+                          ],
+                        ))
+                  ],
+                ),
+                SizedBox(height: 20),
+                ArrivalsTable(),
+                SizedBox(height: 50),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Column(
+                        children: [
+                          FormButton(
+                            press: () {
+                              if (_arrvialsFormKey.currentState.validate()) {
+                                Scaffold.of(context).showBottomSheet(
+                                    (context) => Text('Form Submitted'));
+                              }
+                            },
+                            text: 'Submit',
+                          ),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      children: [SizedBox(width: 100)],
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Column(
+                        children: [
+                          FormButton(
+                            press: () {},
+                            text: 'Clear',
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            FormTextField(
-              labelText: "Farmer ID",
-              returnText: "Please Enter the First Name",
-            ),
-            FormTextField(
-              labelText: "Address",
-              returnText: "Enter the Address",
-            ),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            SizedBox(width: size.width * 0.03),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            SizedBox(height: size.height * 0.07),
-            FormTextField(
-              labelText: "Farmer Contact",
-              returnText: "Enter Farmer Contact",
-            ),
-            FormTextField(
-              labelText: "Town",
-              returnText: "Enter the Town Name",
-            ),
-            FormTextField(
-              labelText: "City",
-              returnText: "Enter the City Name",
-            ),
-            FormTextField(
-              labelText: "State",
-              returnText: "Enter the State Name",
-            ),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            SizedBox(width: size.width * 0.03),
-          ],
-        ),
-        Column(
-          children: <Widget>[
-            SizedBox(height: size.height * 0.07),
-            FormTextField(
-              labelText: "Farmer Name",
-              returnText: "Enter Farmer Name",
-            ),
-            SizedBox(height: size.height * 0.05),
-            RaisedButton(
-                child: Text("Submit"),
-                onPressed: () {
-                  formkey.currentState.save();
-                  formkey.currentState.validate();
-                })
-          ],
-        ),
-      ],
-    )));
+          )),
+    );
   }
 }

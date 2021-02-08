@@ -15,7 +15,7 @@ class TopNavbarItem extends StatelessWidget {
       },
       child: Text(
         title,
-        style: TextStyle(fontSize: 16),
+        style: TextStyle(fontSize: 20),
       ),
     );
   }

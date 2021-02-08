@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class NavigationService {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -7,7 +8,11 @@ class NavigationService {
     return navigatorKey.currentState.pushNamed(routeName);
   }
 
-  //bool goBack() {
-  //return navigatorKey.currentState.pop();
-  //}
+  Future<dynamic> globalNavigateTo(String routeName, BuildContext context) {
+    return Navigator.of(context).pushNamed(routeName);
+  }
+
+  void goBack() {
+    return navigatorKey.currentState.pop();
+  }
 }
